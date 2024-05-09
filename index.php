@@ -60,14 +60,13 @@ $result_categories = $conn->query($sql_categories);
             background-size: cover; 
         }
         .page-title{
-            background: rgba(0,0, 0, 0.5);
-            text-align: center;
             padding: 50px;
-            color: white;
-            font-family: fantasy;
             font-size: 100px;
-            letter-spacing: 20px;
-            font-variant: small-caps;
+            /* font-weight: bold; */
+            letter-spacing: 10px;
+            color: white;
+            background: rgba(0,0, 0, 0.5);
+            text-align:center;
         }
         #sticky{
             position: fixed;
@@ -132,7 +131,7 @@ $result_categories = $conn->query($sql_categories);
         }
         .logo{
             width: 9%;
-            height:61px;
+            height:53px;
             padding-bottom:8px;
         }
         .menu-ul{
@@ -198,7 +197,7 @@ $result_categories = $conn->query($sql_categories);
             background-color:#ebebeb;
         }
         .categories:hover,.items:hover{
-            box-shadow: 0 0 5px 5px #122949;
+            box-shadow: 0 0 2px 2px #122949;
         }
         .item-image{
             height: 200px;
@@ -218,7 +217,7 @@ $result_categories = $conn->query($sql_categories);
         .title{
             padding: 50px;
             font-size: 50px;
-            font-weight: bold;
+            /* font-weight: bold; */
             letter-spacing: 10px;
             color: white;
             background: rgba(0,0, 0, 0.5);
@@ -282,12 +281,14 @@ $result_categories = $conn->query($sql_categories);
             text-decoration: none;
             color:black;
         }
+
+        
     </style>
 </head>
 
 <body translate="no">
     <div class="main">
-        <div class="page-title">Brands</div>
+    <div class="page-title">BRANDS</div>
             <div class="menu" id="sticky">
                 <div class="container">
                     <img src="images/images.png" class="logo">
@@ -330,6 +331,12 @@ $result_categories = $conn->query($sql_categories);
                 <div class="categories">
                     <img src="https://www.team-bhp.com/forum/attachments/indian-car-scene/1468356d1454496306-hyundai-auto-expo-2016-27a.jpg" alt="" class="item-image">
                     <div class="image-title">Hyundai</div>
+                </div>
+            </a>
+            <a href="categories.php?category_id=3">
+                <div class="categories">
+                    <img src="https://indiantreasurehouse.com/static/media/Innova.dbdd69205e70c4940514.webp" alt="" class="item-image">
+                    <div class="image-title">Kia </div>
                 </div>
             </a>
             <a href="categories.php?category_id=5">

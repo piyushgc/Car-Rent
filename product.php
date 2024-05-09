@@ -424,6 +424,10 @@ $conn->close();
             text-decoration: none;
             color:black;
         }
+        .category-page h1{
+            margin-top:-60px;
+        }
+        
     </style>  
 </head>
 
@@ -446,7 +450,9 @@ $conn->close();
             </div>
         </div>
     </div>
+    
     <div class="wrap category-page">
+        <h1>Available Cars/Buses</h1>
         <div class="center-container">
             <div class="products">
             <?php

@@ -219,6 +219,7 @@ $conn->close();
             width: 95%;
             border: 1px solid #eee;
             margin-bottom: 15px;
+            border-radius:5px;
         }
 
         .filters .filter-block:hover {
@@ -227,12 +228,14 @@ $conn->close();
 
         .filters .filter-block .filter {
             background-color: white;
+            border-radius:5px;
+
             padding: 5px;
             border-bottom: 1px solid #eee;
         }
 
         .filters .filter-block:hover .filter {
-            /* background-color: hsl(64, 58%, 46%); */
+            background-color: #c7d9f2;
             color: white;
         }
 
@@ -254,7 +257,9 @@ $conn->close();
         .filters .filter-block .property input[type='checkbox'] {
         float: right;
         }
-        
+        .filter a{
+            color:#122949;
+        }
 
         .products {
         float: left;

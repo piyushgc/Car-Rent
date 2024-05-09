@@ -259,7 +259,7 @@
   </div>
   <div id='lower-side'>
     <p id='message'>
-      Congratulations, your account has been successfully created.
+      Booking Confirmed, We've sent a details to your e-mail.
     </p>
     <a href="#" id="contBtn">Continue</a>
   </div>

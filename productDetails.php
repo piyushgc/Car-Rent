@@ -166,8 +166,8 @@ $conn->close();
             margin: 8px;
         }
         .search-box:hover{
-            box-shadow: 0 0 10px #5b8c5a;
-            border: 1px solid #5b8c5a;
+            box-shadow: 0 0 10px #122949;
+            border: 1px solid #122949;
         }
         .search-input{
             width: 150px;

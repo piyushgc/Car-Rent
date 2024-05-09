@@ -17,11 +17,15 @@ if (isset($_POST['submit'])) {
     $city = $_POST['city'];
     $address_state = $_POST['address_state'];
     $street_address = $_POST['street_address'];
+    $start_date = $_POST['s_date'];
+    $end_date = $_POST['e_date'];
+    $id_type = $_POST['id_ty'];
+    $id_no = $_POST['id_number'];
 
     if(isset($_SESSION['order_id'])) {
         $order_id = $_SESSION['order_id'];
 
-        $insert_query = "INSERT INTO delivery_details (order_id, firstname, lastname, mobile_number, email, city, address_state, street_address) VALUES ('$order_id', '$firstname', '$lastname', '$mobile_number', '$email', '$city', '$address_state', '$street_address')";
+        $insert_query = "INSERT INTO delivery_details (order_id, firstname, lastname, mobile_number, email, city, address_state, street_address,s_date,e_date,id_ty,id_number) VALUES ('$order_id', '$firstname', '$lastname', '$mobile_number', '$email', '$city', '$address_state', '$street_address','$start_date',' $end_date','$id_type','$id_no')";
         mysqli_query($conn, $insert_query);
 
         $empty_cart_sql = "TRUNCATE TABLE cart";
@@ -36,6 +40,11 @@ if (isset($_POST['submit'])) {
         $orderDetails .= "City: $city<br>";
         $orderDetails .= "State: $address_state<br>";
         $orderDetails .= "Street Address: $street_address<br>";
+        $orderDetails .= "Start Date: $start_date<br>";
+        $orderDetails .= "Last Date: $end_date<br>";
+        $orderDetails .= "ID: $id_type<br>";
+        $orderDetails .= "ID No.: $id_no<br>";
+
 
         try {
             $mail->Host = 'smtp.gmail.com';
@@ -372,7 +381,6 @@ if (isset($_POST['submit'])) {
                                 <option value="TAS">Tasmania</option>
                                 <option value="ACT">Australian Capital Territory</option>
                                 <option value="NT">Northern Territory</option>
-                                <option value="Others">Others</option>
                             </select>
                         </label>
                     </div>
@@ -393,12 +401,12 @@ if (isset($_POST['submit'])) {
                     </div>
                     <div class="fields fields--2">
                     <label class="field">
-                            <span class="field__label" for="id_type">ID Type</span>
-                            <select class="field__input" id="id_type" name="id_type">
-                                <option value="NSW">Passport</option>
-                                <option value="VIC">Govt. Id</option>
-                                <option value="QLD">Voter Id</option>
-                                <option value="QLD">Driving Lic.</option>
+                            <span class="field__label" for="id_ty">ID Type</span>
+                            <select class="field__input" id="id_ty" name="id_ty">
+                                <option value="PASS">Passport</option>
+                                <option value="GOVT">Govt. Id</option>
+                                <option value="VOTER">Voter Id</option>
+                                <option value="DL">Driving Lic.</option>
                             </select>
                         </label>
 
